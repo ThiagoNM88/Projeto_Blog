@@ -1,5 +1,5 @@
 <h1>Edit Article</h1>
-
+<%= link_to 'Back', articles_path %>
 <%= form_with(model: @article, local: true, html: {class: "form"}) do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -28,7 +28,7 @@
 </p>
 <p>
   <div class="actions" class="actions">
-    <%= f.submit "Create Article", data: { turbo: false } %>
+    <%= f.submit "Update Article", data: { turbo: false } %>
   </div>
 <% end %>
 </p>

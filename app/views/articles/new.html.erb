@@ -1,9 +1,5 @@
 <h1>Create an Article</h1>
 
-def show
-  @article = Article.find(params[:id])
- end
-
 <%= form_with(model: @article, local: true, html: {class: "form"}) do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -16,28 +12,21 @@ def show
       </ul>
     </div>
   <% end %>
-<p>
   <div class="field">
     <%= f.label :title %>
     <br>
     <%= f.text_field :title %>
   </div>
-</p>
-<p>
   <div class="field">
     <%= f.label :description %>
     <br>
-     <%= f.text_area :description %>
+    <%= f.text_area :description %>
   </div>
-</p>
-<p>
-  <div class="actions" class="actions">
+  <div class="actions">
     <%= f.submit "Create Article", data: { turbo: false } %>
   </div>
 <% end %>
-</p>
 
-<%# Adicione isso para criar um frame %>
 <%= turbo_frame_tag 'new_article_frame' do %>
   <h2>Preview:</h2>
   <p><%= @article.title %></p>
