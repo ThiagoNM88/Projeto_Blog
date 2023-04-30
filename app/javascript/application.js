@@ -2,6 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "require jquery"
-import "require bootstrap-sprockets"
 import "require rails-ujs"
 import "require_tree"
+//= require jquery
+//= require bootstrap-sprockets
