@@ -36,6 +36,13 @@ class ArticlesController < ApplicationController
         render 'edit'
       end
     end
+
+    def destroy
+      puts "Entrou no método destroy"
+      puts "ID do artigo a ser excluído: #{params[:id]}"
+      @article.destroy
+      redirect_to articles_path
+    end
   
     private
   
