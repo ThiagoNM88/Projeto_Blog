@@ -1,4 +1,7 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+
+$navbar-default-bg: black;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
