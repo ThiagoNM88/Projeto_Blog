@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjetoBlog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blog</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    
-    <%= render 'layouts/navigation' %>
-    <% flash.each do |name, msg| %>
-        <ul>
-          <li><%= msg %></li>
-        </ul>
-    <% end %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
+<body>
+    <%= render 'layouts/navigation' %>
+    <%= render 'shared/messages' %>
     <%= yield %>
   </body>
 </html>
