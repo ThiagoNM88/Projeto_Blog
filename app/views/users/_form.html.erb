@@ -1,4 +1,4 @@
-<%= render 'shared/errors', obj: @user %>
+<%= render 'shared/errors', object: @user %>
 
 <div class="row">
  <div class="col-xs-12">
@@ -27,11 +27,11 @@
     <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
    </div>
   </div>  
-  <div class="form-group">
+ <div class="form-group">
    <div class="col-sm-offset-2 col-sm-10">
     <%= f.submit(@user.new_record?  ? "Sign up" : "Update account", class: 'btn btn-primary btn-large') %>
    </div>
-  </div>
+</div>
 <% end %>
   <div class="col-xs-4 col-xs-offset-2">
   [ <%= link_to 'Cancel request and Return to Articles Listing', articles_path %> ]
